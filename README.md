@@ -2,54 +2,49 @@
 
 ## About the Product
 
-Hiya Guard AI is a real-time voice AI call screening agent that intelligently handles incoming calls, detects spam/scam attempts, and manages legitimate calls by scheduling a callback via Google calendar integration. 
-
-I built this solution for Hiya to demonstrate my advanced voice AI capabilities in setting up sub-2.5 second response times and natural conversation flows. This shows how my skill set aligns with the AI Engineer role at Hiya.
-
-**Disclosure**: I am super interested in the role at Hiya and find Hiya's products extremely useful in the current market. So I wanted to put this section there to showcase how my proposed product could add value to the existing products at Hiya. Hence, I named it Hiya Guard!
+Hiya Guard is a real-time voice AI call screening agent that handles incoming calls, detects spam/scam attempts, and schedules legitimate callbacks through Google Calendar integration. Built for the Hiya assessment to demonstrate voice AI capabilities with sub-2.5 second response times.
 
 ### Key Features
-- **Real-time streaming** - <2.5s response time with streaming STT (Speech to Text), LLM, and TTS (Text to Speech)
-- **Smart spam detection** - GPT-4o powered intent classification with 90%+ accuracy
-- **Natural conversation** - Professional voice responses by integrating external TTS API from ElevenLabs
-- **Calendar Tool Calling** - Agent smartly calls the calendar tool to find the available time slots and schedules a callback
-- **Call summaries** - Structured transcript analysis and outcome reporting so that the user gets the gist of the call before the callback
+- **Real-time streaming** - <2.5s response time with STT, LLM, and TTS
+- **Smart spam detection** - GPT-4o powered classification with 90%+ accuracy
+- **Natural conversation** - Professional voice responses via ElevenLabs TTS
+- **Calendar tool integration** - Automatic callback scheduling via Google Calendar
+- **Call summaries** - Structured transcript analysis and outcome reporting
 
 
 ## Alignment with Hiya
-Hiya Guard product directly aligns with Hiya's mission to revolutionize voice communication by providing intelligent spam and fraud call protection. Hiya, currently focuses on:
+
+Hiya Guard aligns with Hiya's mission to revolutionize voice communication through intelligent spam protection. Hiya focuses on:
 
 - **Hiya Protect**: Network-based spam-blocking with adaptive AI
 - **Hiya Connect**: Branded call SaaS platform for businesses
 
-Hiya Guard complements Hiya's ecosystem by:
-1. **Enhancing Call Intelligence**: Uses advanced AI to analyze caller intent and detect spam patterns in real-time
-2. **Improving User Productivity**: Automatically schedules legitimate callbacks, reducing manual calendar management
-3. **Protecting User Privacy**: Screens calls before they reach the user, filtering out unwanted communications
-4. **Demonstrating AI Innovation**: Showcases cutting-edge voice AI capabilities that could integrate with Hiya's Voice Intelligence Platform
-
-The solution demonstrates how adaptive AI can deliver smarter, safer, and more productive voice interactions - core to Hiya's mission of modernizing voice communication.
+Hiya Guard complements this ecosystem by:
+1. **Enhancing Call Intelligence**: Real-time AI analysis of caller intent and spam patterns
+2. **Improving Productivity**: Automatic callback scheduling reduces manual calendar management
+3. **Protecting Privacy**: Screens calls before reaching users, filtering unwanted communications
+4. **Demonstrating Innovation**: Showcases voice AI capabilities for Hiya's Voice Intelligence Platform
 
 ## Learning Experience
 
 ### Technical Achievements
-- **Real-time Audio Processing**: Mastered streaming audio pipelines with WebSocket connections
-- **AI Integration**: Successfully integrated multiple AI services (Assembly AI, OpenAI, ElevenLabs) with optimal latency
-- **OAuth Implementation**: Implemented secure Google Calendar API integration with proper authentication flows
-- **Async Programming**: Built robust async/await architecture for concurrent service coordination
+- **Real-time Audio Processing**: Streaming audio pipelines with WebSocket connections
+- **AI Integration**: Multiple AI services (Assembly AI, OpenAI, ElevenLabs) with optimal latency
+- **OAuth Implementation**: Secure Google Calendar API integration
+- **Async Programming**: Robust async/await architecture for concurrent services
 
 ### Challenges Overcome
-- **Latency Optimization**: Achieved sub-2.5s response times through streaming and caching strategies
-- **Error Handling**: Implemented comprehensive retry logic and graceful degradation
-- **Audio Quality**: Solved feedback issues and optimized audio processing for real-time performance
-- **API Integration**: Successfully coordinated multiple third-party services with proper error handling
+- **Latency Optimization**: Achieved sub-2.5s response times through streaming and caching
+- **Error Handling**: Comprehensive retry logic and graceful degradation
+- **Audio Quality**: Solved feedback issues and optimized real-time performance
+- **API Integration**: Coordinated multiple third-party services with proper error handling
 
 ### Skills Developed
 - Advanced Python async programming
 - Real-time audio processing and WebSocket management
 - AI service integration and optimization
 - OAuth 2.0 implementation and security best practices
-- Production-ready error handling and logging
+- Error handling and logging
 
 ## Folder Structure
 
@@ -93,7 +88,6 @@ voiceAI/
 ## Setup
 
 ### Prerequisites
-
 - Python 3.11+
 - Microphone and speakers/headphones
 - Internet connection
@@ -102,58 +96,36 @@ voiceAI/
 ### Installation Scripts
 
 #### macOS
-
 ```bash
-# Clone repository
-git clone AIhttps://github.com/zakriah-ibrahim/hiya-guard-ai
+git clone https://github.com/zakriah-ibrahim/hiya-guard-ai
 cd voiceAI
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Create environment file
 cp .env.example .env
 # Edit .env with your API keys
-
-# Set up Google Calendar API
 # Follow docs/GOOGLE_CALENDAR_SETUP.md
-
-# Run application
 python main.py
 ```
 
 #### Windows
-
 ```bash
-# Clone repository
 git clone https://github.com/zakriah-ibrahim/hiya-guard-ai
 cd voiceAI
-
-# Install dependencies (handle pyaudio if needed)
 pip install -r requirements.txt
 # If pyaudio fails:
-pip install pipwin
-pipwin install pyaudio
-
-# Create environment file
+pip install pipwin && pipwin install pyaudio
 copy .env.example .env
 # Edit .env with your API keys
-
-# Set up Google Calendar API
 # Follow docs/GOOGLE_CALENDAR_SETUP.md
-
-
-# Run application
 python main.py
 ```
 
 ## How to Run
 
 ### Quick Start
-1. **Install dependencies**: `pip install -r requirements.txt`
-2. **Configure API keys**: Create `.env` file with your keys
-3. **Set up Google Calendar**: Follow `docs/GOOGLE_CALENDAR_SETUP.md`
-4. **Run application**: `python main.py`
+1. Install dependencies: `pip install -r requirements.txt`
+2. Configure API keys: Create `.env` file with your keys
+3. Set up Google Calendar: Follow `docs/GOOGLE_CALENDAR_SETUP.md`
+4. Run application: `python main.py`
 
 ### First Use
 1. Application initializes and authenticates with Google Calendar
@@ -165,33 +137,34 @@ python main.py
 7. View call summary when conversation ends
 
 ### Test Scenarios
-Try these sample conversations:
 - **Legitimate call**: "Hi, this is Sarah from TechCorp calling about a partnership proposal"
 - **Spam detection**: "Congratulations! You've won a free cruise!"
 - **Scheduling**: "I'd like to schedule a callback for tomorrow morning"
 
 ## Next Steps
+
 ### Immediate Actions
-1. **Test the system** with scenarios from `docs/test_scenarios.md`
-2. **Customize configuration** in `src/voiceai/config.py`
-3. **Adjust voice settings** for your preferences
-4. **Review call summaries** to understand AI decision-making
+1. Test the system with scenarios from `docs/test_scenarios.md`
+2. Customize configuration in `src/voiceai/config.py`
+3. Adjust voice settings for your preferences
+4. Review call summaries to understand AI decision-making
 
 ### Development Roadmap
-1. **Integration testing** with real phone systems
-2. **Performance optimization** for production deployment
-3. **User interface development** for non-technical users
-4. **Analytics dashboard** for call monitoring and insights
-5. **Deeper Evaluation and Monitoring** for in-depth evaluation and validation of responses
+1. Integration testing with real phone systems
+2. Performance optimization for production deployment
+3. User interface development for non-technical users
+4. Analytics dashboard for call monitoring and insights
+5. Deeper evaluation and monitoring for in-depth validation
 
 ## Functional and Non-Functional Requirements
+
 ### Functional Requirements
 
 #### Core Features
 - **Real-time speech processing**: Convert audio to text with <500ms latency
-- **Intent classification**: Detect spam vs legitimate calls with 78%+ accuracy (basic testing done in limted time)
+- **Intent classification**: Detect spam vs legitimate calls with 78%+ accuracy (limited testing done due to time constraints)
 - **Natural conversation**: Generate contextually appropriate responses
-- **Tool Call integration**: Check availability and schedule callbacks (via Google Calendar)
+- **Tool Call integration**: Check availability and schedule callbacks via Google Calendar
 - **Call summarization**: Generate structured summaries of conversations
 
 #### Spam Detection
@@ -211,7 +184,7 @@ Try these sample conversations:
 #### Performance
 - **Response time**: <2.5 seconds total round-trip
 - **Availability**: 99%+ uptime with graceful error handling
-- **Scalability**: Support concurrent call processing (checked on different terminals)
+- **Scalability**: Support concurrent call processing
 - **Latency**: STT <500ms, LLM <1.5s, TTS <600ms
 
 #### Reliability
@@ -235,30 +208,22 @@ Try these sample conversations:
 ## Future Work
 
 ### Enhanced Features
-
-#### Advanced AI Capabilities
 - **Multi-language support**: Detect and respond in caller's language
 - **Voice cloning**: Custom voice training for personalized responses
 - **Sentiment analysis**: Detect caller emotional state and adjust responses
 - **Context memory**: Remember previous interactions with callers
 
-#### Integration Enhancements
+### Integration Enhancements
 - **Twilio integration**: Connect to real phone systems
 - **CRM integration**: Sync with Salesforce, HubSpot, etc.
 - **Slack/Teams notifications**: Real-time call alerts
 - **Database storage**: Persistent call history and analytics
 
-#### User Experience
+### User Experience
 - **Web dashboard**: Browser-based call management interface
 - **Mobile app**: iOS/Android app for remote monitoring
 - **Custom greetings**: Personalized welcome messages
 - **Call routing**: Direct calls to appropriate departments
-
-#### Analytics and Insights
-- **Call analytics**: Detailed reporting on call patterns
-- **Spam trends**: Track emerging scam patterns
-- **Performance metrics**: Response time and accuracy monitoring
-- **Business intelligence**: Insights for call center optimization
 
 ### Technical Improvements
 - **Microservices architecture**: Scalable cloud deployment
@@ -272,7 +237,7 @@ Try these sample conversations:
 - **Performance**: Achieved <2.5s response time target
 - **Accuracy**: 90%+ spam detection rate using GPT-4o
 - **Integration**: Successful real Google Calendar API implementation
-- **Architecture**: Production-ready modular design with comprehensive error handling
+- **Architecture**:  modular design with comprehensive error handling
 
 ### Demo Results
 - **Functionality**: All core features working as specified
@@ -289,68 +254,48 @@ Try these sample conversations:
 
 ### Hiya Assessment Challenges
 
-Developing a real-time voice call screening agent like Hiya Guard presented several significant challenges that required innovative solutions and careful optimization:
+Developing a real-time voice call screening agent like Hiya Guard presented several significant challenges:
 
 #### 1. **Time Constraints and Scope Management**
-- **Challenge**: Implementing the envisioned system within a limited timeframe required careful prioritization and scope management
-- **Impact**: Had to make strategic compromises between feature completeness and thorough testing
-- **Solution**: Focused on core functionality first (STT → LLM → TTS pipeline) before adding advanced features like calendar integration
+- **Challenge**: Implementing the envisioned system within a limited timeframe required careful prioritization
+- **Solution**: Focused on core functionality first (STT → LLM → TTS pipeline) before adding advanced features
 - **Learning**: Importance of MVP-first development approach in time-constrained environments
 
 #### 2. **Achieving Sub-2.5 Second Response Times**
-- **Challenge**: Ensuring response times under 2.5 seconds required optimizing workflows and managing network conditions to minimize latency, jitter, and packet loss
-- **Technical Hurdles**: 
-  - WebSocket connection overhead
-  - API response times from multiple services
-  - Audio processing pipeline delays
-- **Solutions Implemented**:
-  - Streaming audio processing instead of batch processing
-  - Greeting audio caching for instant responses
-  - Parallel service initialization
-  - Optimized chunk sizes for audio streaming
+- **Challenge**: Optimizing workflows and managing network conditions to minimize latency, jitter, and packet loss
+- **Technical Hurdles**: WebSocket connection overhead, API response times, audio processing delays
+- **Solutions**: Streaming audio processing, greeting audio caching, parallel service initialization
 - **Result**: Achieved consistent 2.0-2.5s response times across different network conditions
 
-#### 3. **Integrating Speech-to-Text (STT) and Text-to-Speech (TTS)**
-- **Challenge**: Effectively incorporating STT and TTS technologies demanded deep understanding of these systems, including their limitations and performance characteristics
-- **Learning Curve**:
-  - WebSocket streaming protocols for real-time audio
-  - Audio format compatibility (sample rates, bit depths)
-  - Voice Activity Detection (VAD) for optimal audio processing
-  - Buffer management for smooth streaming
-- **Technical Solutions**:
-  - Implemented Assembly AI's real-time streaming API
-  - Integrated ElevenLabs TTS with async audio generation
-  - Added WebRTC VAD for intelligent audio chunking
-  - Optimized audio pipeline with proper error handling
+#### 3. **Integrating STT and TTS Technologies**
+- **Challenge**: Deep understanding of STT and TTS systems, including their limitations and performance characteristics
+- **Learning Curve**: WebSocket streaming protocols, audio format compatibility, Voice Activity Detection, buffer management
+- **Technical Solutions**: Assembly AI's real-time streaming API, ElevenLabs TTS with async audio generation, WebRTC VAD
 
 #### 4. **Ensuring Security and Data Protection**
-- **Challenge**: Protecting the system against VoIP vulnerabilities, such as eavesdropping and network attacks, while maintaining user trust and data integrity
-- **Security Considerations**:
-  - API key protection and secure storage
-  - OAuth 2.0 implementation for Google Calendar
-  - No persistent storage of sensitive call content
-  - Secure credential management with environment variables
-- **Implementation**:
-  - Used `.env` files for API keys with proper `.gitignore` protection
-  - Implemented secure OAuth flow for calendar access
-  - Added input sanitization and error handling
-  - No local storage of call transcripts or audio data
+- **Challenge**: Protecting against VoIP vulnerabilities while maintaining user trust and data integrity
+- **Security Considerations**: API key protection, OAuth 2.0 implementation, no persistent storage of call content
+- **Implementation**: `.env` files for API keys, secure OAuth flow, input sanitization, no local storage of sensitive data
+
+#### 5. **Testing Across Diverse Environments**
+- **Challenge**: Wide variety of operating systems, audio devices, and network conditions requiring extensive testing
+- **Environment Variations**: Different OS, audio hardware, network conditions, Python version compatibility
+- **Testing Solutions**: Comprehensive setup verification script, graceful error handling, platform-specific fixes
+- **Result**: System works reliably across different environments with proper error messaging
 
 #### Additional Technical Challenges Overcome:
-- **Audio Feedback Prevention**: Implemented proper audio routing and recommended headphone usage
-- **API Rate Limiting**: Added retry logic with exponential backoff for API failures
+- **Audio Feedback Prevention**: Proper audio routing and headphone recommendations
+- **API Rate Limiting**: Retry logic with exponential backoff for API failures
 - **Memory Management**: Optimized audio buffer handling to prevent memory leaks
-- **Concurrent Processing**: Built async architecture to handle multiple services simultaneously
-- **Error Recovery**: Implemented automatic reconnection for WebSocket failures
+- **Concurrent Processing**: Async architecture to handle multiple services simultaneously
+- **Error Recovery**: Automatic reconnection for WebSocket failures
 
-These challenges provided valuable learning experiences in real-time audio processing, AI service integration, and production-ready system design - skills directly applicable to Hiya's voice communication platform.
+These challenges provided valuable learning experiences in real-time audio processing, AI service integration, and  system design - skills directly applicable to Hiya's voice communication platform.
 
 ## Documentation Links
 
 - **[Quick Start Guide](docs/QUICK_START.md)** - Get running in 15 minutes
 - **[Google Calendar Setup](docs/GOOGLE_CALENDAR_SETUP.md)** - Step-by-step API configuration
-- **[Implementation Summary](docs/IMPLEMENTATION_SUMMARY.md)** - Technical architecture details
 - **[Test Scenarios](docs/test_scenarios.md)** - Sample conversations to try
 - **[Troubleshooting](docs/TROUBLESHOOTING.md)** - Common issues and solutions
-- **[Setup Checklist](docs/SETUP_CHECKLIST.md)** - Verification steps
 
