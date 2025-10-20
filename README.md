@@ -69,11 +69,8 @@ voiceAI/
 │           ├── stt.py
 │           └── tts.py
 ├── docs/
-│   ├── START_HERE.md                  # Quick start guide
 │   ├── QUICK_START.md                 # 15-minute setup
 │   ├── GOOGLE_CALENDAR_SETUP.md       # Calendar API setup
-│   ├── IMPLEMENTATION_SUMMARY.md      # Technical overview
-│   ├── SETUP_CHECKLIST.md             # Setup verification
 │   ├── test_scenarios.md              # Test scripts
 │   └── TROUBLESHOOTING.md             # Problem solving
 ├── tests/
