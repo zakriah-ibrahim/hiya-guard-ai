@@ -294,7 +294,7 @@ These challenges provided valuable learning experiences in real-time audio proce
 ## Documentation Links
 
 - **[Presentation](submission_docs/Hiya%20Guard%20AI%20-%20Mohammed%20Zakriah%20Ibrahim.pptx)** - POC development Presentation
-- **[User Stories](submission_docs/user_stories.md)** - Target user personas and requirements
+- **[User Stories](submission_docs/USER_STORIES.md)** - Target user personas and requirements
 - **[Quick Start Guide](docs/QUICK_START.md)** - Get running in 15 minutes
 - **[Google Calendar Setup](docs/GOOGLE_CALENDAR_SETUP.md)** - Step-by-step API configuration
 - **[Test Scenarios](docs/test_scenarios.md)** - Sample conversations to try
