@@ -4,6 +4,8 @@
 
 Hiya Guard is a real-time voice AI call screening agent that handles incoming calls, detects spam/scam attempts, and schedules legitimate callbacks through Google Calendar integration. Built for the Hiya assessment to demonstrate voice AI capabilities with sub-2.5 second response times.
 
+**Note**: This project was developed with assistance from Cursor IDE's LLM-powered coding tools to accelerate development and ensure code quality.
+
 ### Key Features
 - **Real-time streaming** - <2.5s response time with STT, LLM, and TTS
 - **Smart spam detection** - GPT-4o powered classification with 90%+ accuracy
@@ -291,6 +293,8 @@ These challenges provided valuable learning experiences in real-time audio proce
 
 ## Documentation Links
 
+- **[Presentation](submission_docs/Hiya%20Guard%20AI%20-%20Mohammed%20Zakriah%20Ibrahim.pptx)** - POC development Presentation
+- **[User Stories](submission_docs/user_stories.md)** - Target user personas and requirements
 - **[Quick Start Guide](docs/QUICK_START.md)** - Get running in 15 minutes
 - **[Google Calendar Setup](docs/GOOGLE_CALENDAR_SETUP.md)** - Step-by-step API configuration
 - **[Test Scenarios](docs/test_scenarios.md)** - Sample conversations to try
