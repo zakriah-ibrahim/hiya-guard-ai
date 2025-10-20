@@ -31,7 +31,7 @@ class VoiceGuardAI:
         self.confirmation_received = False
         
     async def initialize(self):
-        print("Initializing VoiceGuard AI...")
+        print("Initializing Hiya Guard...")
         
         try:
             self.calendar_service.authenticate()
@@ -48,7 +48,7 @@ class VoiceGuardAI:
         
         self.llm_engine.initialize_conversation()
         
-        print("VoiceGuard AI ready")
+        print("Hiya Guard ready")
         print("\nPress Enter to answer incoming call...")
     
     async def on_transcript(self, transcript, is_final):
@@ -127,7 +127,7 @@ class VoiceGuardAI:
                     event_link = self.calendar_service.create_event(
                         self.scheduled_time,
                         self.caller_purpose or "Callback Request",
-                        "Scheduled via VoiceGuard AI"
+                        "Scheduled via Hiya Guard"
                     )
                     
                     if event_link:
@@ -394,7 +394,7 @@ async def main():
         print(f"\nError: {e}")
     finally:
         agent.cleanup()
-        print("\nVoiceGuard AI shutdown complete")
+        print("\nHiya Guard shutdown complete")
 
 if __name__ == "__main__":
     asyncio.run(main())

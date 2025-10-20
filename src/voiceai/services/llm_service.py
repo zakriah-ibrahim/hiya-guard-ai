@@ -13,7 +13,7 @@ class ConversationEngine:
         self.confidence = 0.0
         
     def _build_system_prompt(self):
-        return f"""You are VoiceGuard AI, an assistant answering calls for {self.user_name}.
+        return f"""You are Hiya Guard, an assistant answering calls for {self.user_name}.
 
 YOUR ROLE:
 - Be professional, polite, and concise
